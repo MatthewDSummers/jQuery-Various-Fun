@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>jQuery Functions</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Matthew Summers">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id="entry">
+            <div>
+                <h1>Add Class</h1>
+                <h3>.addclass</h3>
+                <button type="button" class="btn add-class-b">Add Class</button>
+                <p id="add-class-p">Click the button to add class "red" to this paragraph</p>
+            </div>
+            <div>
+                <h1>Click</h1>
+                <h3>.click</h3>
+                <button type="button" class="btn click-button">.click-button</button>
+                <p>Did you notice something happened when you clicked? Upon clicking the element (".click-button" in this case), the function will execute</p>
+                <p id="click-paragraph">$('.click-button')<span>.click</span>(function(){
+                <br>$('.click-paragraph').addClass('red');
+                });
+                </p>
+            </div>
+            <div id="slide-toggle">
+                <h1>Slide Toggle</h1>
+                <h3>.slideToggle</h3>
+                <button type="button" class="btn sl-tog-b">Slide Toggle</button>
+                <p>Click the button to slideToggle a hidden image</p>
+                <img class="sl-tog-img" src="snoopy.jpeg" alt="slide-toggle-image">
+            </div>
+            <div>
+                <h1>Append</h1>
+                <h3>.append</h3>
+                <button type="button" class="btn append-b">Append</button>
+                <p id="append-p">Click the button to append a new paragraph!</p>
+            </div>
+            <div>
+                <h1>Hide</h1>
+                <h3>.hide</h3>
+                <button type="button" class="btn hide-b">Hide</button>
+                <p id="hide-p">Click the button to hide the paragraph</p>
+            </div>
+            <div>
+                <h1>Show</h1>
+                <h3>.show</h3>
+                <button type="button" class="btn show-b">Show</button>
+                <p id="show-p">You did it!  Keep up the great work!</p>
+            </div>
+            <div>
+                <h1>Toggle</h1>
+                <h3>.toggle</h3>
+                <button type="button" class="btn toggle-b">Toggle</button>
+                <p id='toggle-p'>Click the button to toggle this paragraph</p>
+            </div>
+            <div>
+                <img class='slide-down-img' src="mnote.jpg" alt="music-note">
+                <h1>Slide Down</h1>
+                <h3>.slideDown</h3>
+                <button type="button" class="btn slide-down-b">Slide Down</button>
+                <p>Click the button to slideDown an image</p>
+            </div>
+            <div>
+                <h1>Slide Up</h1>
+                <h3>.slideUp</h3>
+                <button type="button" class="btn slide-up-b">Slide Up</button>
+                <img class='slide-up-img' src="snoopy.jpeg" alt="music-note">
+                <p>Click the button to slideUp the image</p>
+            </div>
+            <div>
+                <h1>Fade In</h1>
+                <h3>.fadeIn</h3>
+                <button type="button" class="btn fade-in-b">Fade In</button>
+                <img class='fade-in-img' src="snoopy.jpeg" alt="fade-in-img">
+                <p>Click the button to fade-in the image</p>
+            </div>
+            <div>
+                <h1>Fade Out</h1>
+                <h3>.fadeOut</h3>
+                <p>Hover over the image to fade it out</p>
+                <img class='fade-out-img' src="snoopy.jpeg" alt="fade-out-img">
+            </div>
+            <div>
+                <h1>Before</h1>
+                <h3>.before</h3>
+                <button type="button" class="btn before-b">Before</button>
+                <p> Let's do some ordering, yeah?</p>
+                <img class="before-img" src="mnote.jpg" alt="after-img">
+                <p>Click the button to insert something before the img element in this div</p>
+            </div>
+            <div>
+                <h1>After</h1>
+                <h3>.after</h3>
+                <button type="button" class="btn after-b">After</button>
+                <p id='after-p'> Let's do some more ordering.</p>
+                <img class="after-img" src="mnote.jpg" alt="after-img">
+                <p>Click the button to insert something after the img element in this div</p>
+            </div>
+            <div>
+                <h1>HTML</h1>
+                <h3>.html</h3>
+                <button type="button" class="btn html-b">HTML</button>
+                <p>Click the button to change the HTML below. We'll replace the paragraph tag with an image</p>
+                <p id='html-p'>I feel like I'm about to change...</p>
+            </div>
+            <div>
+                <h1>Attribute</h1>
+                <h3>.attr</h3>
+                <button type="button" class="btn attr-b">Attribute</button>
+                <input id='attr' type="email" placeholder="example@email.com">
+                <p>Click the button to display the placeholder attribute below.</p>
+                <p id="attr-p">The placeholder attribute is: <b><span></span></b></p>
+            </div>
+            <div>
+                <h1>Value</h1>
+                <h3>.val</h3>
+                <button type="button" class="btn value-b">Value</button>
+                <input id='val' type="text" placeholder="Type here!">
+                <p>Type something in the text field below.</p>
+                <p>Click the button to display the value of the input field below</p>
+                <p id="val-p">The value of the email is: <b><span></span></b></p>
+            </div>
+            <div>
+                <h1>Text</h1>
+                <h3>.text</h3>
+                <button type="button" class="btn text-b">Text</button>
+                <p>Click the button to change the text of the paragraph below using ".text"</p>
+                <p id="text-p">Change me</p>
+            </div>
+        </div>
+        <script>
+            $('.add-class-b').click(function(){
+                $('#add-class-p').addClass('red');
+            });
+            $('.click-button').click(function(){
+                $('#click-paragraph').addClass('red');
+            });
+            $('.sl-tog-b').click(function(){
+                $('.sl-tog-img').slideToggle('slow');
+            });
+            $('.append-b').click(function(){
+                $('#append-p').append('<br><b>I am another paragraph. You did it!</b>');
+            });
+            $('.hide-b').click(function(){
+                $('#hide-p').hide();
+            });
+            $('.show-b').click(function(){
+                $('#show-p').show();
+            });
+            $('.toggle-b').click(function(){
+                $('#toggle-p').toggle();
+            });
+            $('.slide-down-b').click(function(){
+                $('.slide-down-img').slideDown(800);
+            });
+            $('.slide-up-b').click(function(){
+                $('.slide-up-img').slideUp();
+            });
+            $('.fade-in-b').click(function(){
+                $('.fade-in-img').fadeIn(2000);
+            });
+            $('.fade-out-img').hover(function(){
+                $(this).fadeOut(1000);
+            });
+            $('.before-b').click(function(){
+                $('.before-img').before('<p><b>Hey, you added me before that element!<b></p>');
+            });
+            $('.after-b').click(function(){
+                $('.after-img').after('<br><p><b>Hey, you added me after that element!<b></p>');
+            });
+            $('.html-b').click(function(){
+                $('#html-p').html('<img src="snoopy.jpeg" alt="html-img">');
+            });
+            $('.attr-b').click(function(){
+                var x = $('#attr').attr('placeholder');
+                $('#attr-p span').html(x);
+            });
+            $('.value-b').click(function(){
+                var x = $('#val').val();
+                $('#val-p span').html(x);
+            });
+            $('.text-b').click(function(){
+                $('#text-p').text('<b>Now we changed it. Even tags inputted as text will be printed</b>');
+            });
+        </script>
+    </body>
+</html>
